@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import routes from './routes';
 import { AppHeader } from './cmp/app-header';
 import { Edit } from './pages/edit';
-
+import { Details } from './pages/details';
 
 function RootCmp() {
   return (
@@ -11,8 +11,11 @@ function RootCmp() {
       <AppHeader />
       <Routes>
         {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
+        <Route path='/todo/details/:id' element={< Details/>} />
         <Route path='/todo/edit/:id' element={< Edit/>} />
         <Route path='/todo/edit' element={< Edit/>} />
+
+
       </Routes>
     </div>
   );

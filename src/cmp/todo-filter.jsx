@@ -21,7 +21,7 @@ export const TodoFilter = ({ onChangeFilter }) => {
 
     return (
         <div>
-            <h1>Edit</h1>
+            <h3>filter</h3>
             <form onSubmit={onFilterBy} action="">
                 <input value={filterBy.name} name="name" type="text" onChange={handleChange} placeholder="task" />
                 <button>filterBy</button>
