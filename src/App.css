@@ -1,0 +1,78 @@
+.circle {
+  height: 64px;
+  width: 64px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: 1rem;
+}
+
+.board {
+  display: grid;
+  gap: 12px;
+
+}
+
+
+/* helpers */
+/* .todo {
+  background: blue;
+  transition: background 0.5s;
+}
+
+*/
+.bc-yellow :hover {
+  background: rgb(69, 29, 29);
+}
+
+.grid {
+  display: grid;
+}
+
+.ml-2 {
+  margin-left: 1rem;
+}
+
+.bc-black {
+  background-color: black;
+  ;
+}
+
+
+.bc-yellow {
+  background-color: rgb(245, 250, 101);
+  transition: background 0.5s;
+}
+
+.bc-orange {
+  background-color: rgb(255, 182, 35);
+  transition: background 0.5s;
+
+}
+
+
+.bc-green {
+  background-color: rgb(81, 183, 75);
+  transition: background 0.5s;
+
+}
+
+.bc-purple {
+  background-color: rgb(147, 0, 192);
+  transition: background 0.5s;
+}
+
+
+.bc-pink {
+  background-color: rgb(255, 35, 204);
+  transition: background 0.5s;
+}
+
+
+.bc-lightcoral {
+  background-color: rgb(255, 125, 125);
+  transition: background 0.5s;
+
+}
