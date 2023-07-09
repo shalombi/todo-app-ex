@@ -11,8 +11,8 @@ function RootCmp() {
       <AppHeader />
       <Routes>
         {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
-        <Route path='/edit/:id' element={< Edit/>} />
-        <Route path='/edit' element={< Edit/>} />
+        <Route path='/todo/edit/:id' element={< Edit/>} />
+        <Route path='/todo/edit' element={< Edit/>} />
       </Routes>
     </div>
   );

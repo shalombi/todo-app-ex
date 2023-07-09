@@ -1,10 +1,7 @@
 const INITIAL_STATE = {
     todos: null,
     filterBy: {
-        model: '',
-        type: '',
-        minBatteryStatus: '',
-        maxBatteryStatus: '',
+        name: '',
     }
 }
 

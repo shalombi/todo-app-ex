@@ -13,23 +13,26 @@ export const todoService = {
 const STORAGE_KEY = 'todos'
 
 const gDefaultTodos = [
-    { _id: 't_101', name: 'wash the dishes', isDone: false},
+    { _id: 't_101', name: 'wash the dishes', isDone: false },
     { _id: 't_102', name: 'throw away the garbage', isDone: false },
     { _id: 't_103', name: 'do sports in the park', isDone: false },
-    { _id: 't_104', name: 'Be Happy', isDone: false  }
+    { _id: 't_104', name: 'Be Happy', isDone: false }
 ]
 
 var gTodos = _loadTodos()
 
 function query(filterBy) {
     let todosToReturn = gTodos
-    if (false && filterBy) {
-        var { type = '', model = '', maxBatteryStatus, minBatteryStatus } = filterBy
-        maxBatteryStatus = maxBatteryStatus || Infinity
-        minBatteryStatus = minBatteryStatus || 0
-        todosToReturn = gTodos.filter(todo => todo.type.toLowerCase().includes(type.toLowerCase()) && todo.model.toLowerCase().includes(model.toLowerCase())
-            && (todo.batteryStatus < maxBatteryStatus)
-            && todo.batteryStatus > minBatteryStatus)
+    if (filterBy) {
+        var { name } = filterBy
+        todosToReturn = gTodos?.filter(todo => todo?.name.toLowerCase().includes(name.toLowerCase()))
+
+        // var { type = '', model = '', maxBatteryStatus, minBatteryStatus } = filterBy
+        // maxBatteryStatus = maxBatteryStatus || Infinity
+        // minBatteryStatus = minBatteryStatus || 0
+        // todosToReturn = gTodos.filter(todo => todo.type.toLowerCase().includes(type.toLowerCase()) && todo.model.toLowerCase().includes(model.toLowerCase())
+        //     && (todo.batteryStatus < maxBatteryStatus)
+        //     && todo.batteryStatus > minBatteryStatus)
     }
     return Promise.resolve([...todosToReturn])
 }

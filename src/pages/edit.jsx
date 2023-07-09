@@ -35,7 +35,7 @@ export const Edit = () => {
         ev.preventDefault()
         try {
             await todoService.save({ ...todo })
-            navigate('/')
+            navigate('/todo')
         } catch (err) {
             console.log('err:', err)
         }
